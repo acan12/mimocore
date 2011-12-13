@@ -1,0 +1,12 @@
+# example config/stackmob.yml
+sm_app_name: 
+sm_client_name:
+heroku_app_name:
+
+development:
+	key:
+	secret:
+
+production:
+	key:
+	secret:
