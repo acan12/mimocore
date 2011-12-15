@@ -1,5 +1,5 @@
 class Comments
   include MongoMapper::Document
   
-  key :owner
+  key :body
 end
