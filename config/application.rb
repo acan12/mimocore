@@ -51,6 +51,7 @@ module Mimocore
     # Version of your assets, change this if you want to expire all your assets
     #old config.assets.version = '1.0'     
     
-    config.gem "mongo_mapper"
+    #config.gem "mongo_mapper"                 
+    config.gem "mongoid"
   end
 end
