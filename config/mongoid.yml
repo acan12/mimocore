@@ -7,8 +7,8 @@ test:
   database: mimodb_test
 
 # set these environment variables on your prod server
-#production:
-#  uri: <%= ENV['MONGOHQ_URL'] %> 
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %> 
 #  host: <%= ENV['MONGOID_HOST'] %>
 #  port: <%= ENV['MONGOID_PORT'] %>
 #  username: <%= ENV['MONGOID_USERNAME'] %>
