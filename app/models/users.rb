@@ -1,5 +1,5 @@
 class Users
-  include MongoMapper::Document
+  include Mongoid::Document
   
-  key :username
+  field :username
 end

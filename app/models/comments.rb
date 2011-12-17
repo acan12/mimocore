@@ -1,5 +1,5 @@
 class Comments
-  include MongoMapper::Document
+  include Mongoid::Document
   
-  key :body
+  field :body
 end
