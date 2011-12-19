@@ -4,7 +4,7 @@
 
 #MongoMapper.connect(Rails.env)
 
-MongoMapper.connection = Mongo::Connection.new('localhost')             
+MongoMapper.connection = Mongo::Connection.new(ENV['MONGOHQ_URL'])             
 MongoMapper.database = "app1611555"
 #MongoMapper.database = "mimodb"    
 
