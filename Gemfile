@@ -3,7 +3,7 @@ source 'http://gemcutter.org'
 
 gem 'rails', '3.1.0'           
 #gem "mongo_mapper" 
-gem "mongoid"              
+gem "mongoid"
 gem "rails3-generators"                  
 
 
