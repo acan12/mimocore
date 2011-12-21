@@ -1,12 +1,3 @@
-<% if ENV['MONGOHQ_URL'] %>
-  <% mongohq = URI.parse(ENV['MONGOHQ_URL']) %>
-mongohq:
-  host: <%= mongohq.host %>
-  port: <%= mongohq.port %>
-  database: <%= mongohq.path.sub '/', '' %>
-  username: <%= mongohq.user %>
-  password: <%= mongohq.password %>
-<% end %>
 
 development:
   host: 127.0.0.1
@@ -18,3 +9,9 @@ test:
 
 # set these environment variables on your prod server
 production:
+  uri: "mongodb://heroku:41a14a0d9537e26db2d916bf71141504@staff.mongohq.com:10037/app1611555" 
+  host: <%= ENV['MONGOID_HOST'] %>
+  port: <%= ENV['MONGOID_PORT'] %>
+  username: <%= ENV['MONGOID_USERNAME'] %>
+  password: <%= ENV['MONGOID_PASSWORD'] %>
+  database: <%= ENV['MONGOID_DATABASE'] %>
