@@ -1,14 +1,14 @@
-#development:
-#  host: 127.0.0.1
-#  database: mimodb
+development:
+  host: 127.0.0.1
+  database: mimodb
 
-#test:
-#  host: 127.0.0.1
-#  database: mimodb_test
+test:
+  host: 127.0.0.1
+  database: mimodb_test
 
 # set these environment variables on your prod server
-#production:
-#  uri: <%= ENV['MONGOHQ_URL'] %> 
+production:
+  uri: <%= ENV['MONGOHQ_URL'] %> 
 #  host: <%= ENV['MONGOID_HOST'] %>
 #  port: <%= ENV['MONGOID_PORT'] %>
 #  username: <%= ENV['MONGOID_USERNAME'] %>
