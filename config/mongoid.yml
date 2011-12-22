@@ -9,9 +9,5 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %> #"mongodb://heroku:41a14a0d9537e26db2d916bf71141504@staff.mongohq.com:10037/app1611555" 
-  host: <%= ENV['MONGOID_HOST'] %>
-  port: <%= ENV['MONGOID_PORT'] %>
-  username: <%= ENV['MONGOID_USERNAME'] %>
-  password: <%= ENV['MONGOID_PASSWORD'] %>
-  database: <%= ENV['MONGOID_DATABASE'] %>
+  uri: "mongodb://heroku:120881heroku@staff.mongohq.com:10037/app1611555" 
+ 
