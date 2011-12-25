@@ -59,4 +59,9 @@ Mimocore::Application.routes.draw do
   
   resources :users
   resources :comments
+  scope "/api/v1" do
+    scope "/biz" do
+      get "/" => "businesses#index"
+    end
+  end
 end
