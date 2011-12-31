@@ -2,15 +2,19 @@ require 'rubygems'
 source 'http://gemcutter.org' 
 
 gem 'rails', '3.1.0'           
-#gem "mongo_mapper" 
-
+#gem "mongo_mapper"                      
 gem "bson_ext" 
 gem "mongoid"   
 gem "rails3-generators"                  
+gem "sunspot_rails"
+                                     
 
 
 
-
+#this is an optional packaged Solr:
+group  :test, :development, :production do
+	gem "sunspot_solr"
+end                          
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
