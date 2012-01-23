@@ -1,5 +1,6 @@
 class Comments
   include Mongoid::Document
   
-  field :body
+  field :body, type: String
+  field :owner
 end
