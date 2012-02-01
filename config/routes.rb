@@ -1,4 +1,4 @@
-Mimocore::Application.routes.draw do
+Mimocore::Application.routes.draw do   
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -58,7 +58,14 @@ Mimocore::Application.routes.draw do
   
   
   resources :users
-  resources :comments
+  resources :comments    
+  resource :streams 
+  namespace :api do
+    namespace :v1 do
+      get "/streams" => "streams#index"
+    end
+  end  
+  
   scope "/api/v1" do
     scope "/biz" do
       get "/" => "businesses#index"
