@@ -55,20 +55,17 @@ Mimocore::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'                    
-  
-  
-  resources :users
-  resources :comments    
-  resource :streams 
+                                   
   namespace :api do
     namespace :v1 do
       get "/streams" => "streams#index"
+      post "/streams" => "streams#create"   
+      
+      get "/biz" => "businesses#index"    
+      post "/biz" => "businesses#create"    
+      #resources :business, :as => "biz", :only => [:index, :create]
     end
   end  
   
-  scope "/api/v1" do
-    scope "/biz" do
-      get "/" => "businesses#index"
-    end
-  end
+  
 end
