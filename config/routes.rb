@@ -62,7 +62,10 @@ Mimocore::Application.routes.draw do
       post "/streams" => "streams#create"   
       
       get "/biz" => "businesses#index"    
-      post "/biz" => "businesses#create"    
+      post "/biz" => "businesses#create"     
+      put "/biz" => "businesses#update"
+      delete "/biz/delete" => "businesses#delete"
+      
       #resources :business, :as => "biz", :only => [:index, :create]
     end
   end  
