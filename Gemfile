@@ -7,6 +7,7 @@ gem "bson_ext"
 gem "mongoid"   
 gem "rails3-generators"                  
 gem "sunspot_rails"
+gem "pusher", "0.9.2"
                                      
 
 

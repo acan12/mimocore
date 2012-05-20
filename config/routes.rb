@@ -1,4 +1,6 @@
 Mimocore::Application.routes.draw do   
+  # resources :articles
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -57,18 +59,27 @@ Mimocore::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'                    
                                    
   namespace :api do
-    namespace :v1 do
-      get "/streams" => "streams#index"
-      post "/streams" => "streams#create"   
-      
-      get "/biz" => "businesses#index"    
-      post "/biz" => "businesses#create"     
-      put "/biz" => "businesses#update"
-      delete "/biz/delete" => "businesses#delete"
-      
-      #resources :business, :as => "biz", :only => [:index, :create]
-    end
-  end  
+        namespace :v1 do
+          get "/streams" => "streams#index"
+          post "/streams" => "streams#create"   
+          
+          get "/biz" => "businesses#index"    
+          post "/biz" => "businesses#create"     
+          put "/biz" => "businesses#update"
+          delete "/biz/delete" => "businesses#delete"
+          
+          #resources :business, :as => "biz", :only => [:index, :create]
+        end
+   end  
+   
+   namespace :school do
+     get "/home" => "home#index"
+   end
   
-  
+  # resources :chatroom
+  #   root :to => 'index#index'
+  # 
+  #   match "/chat/:id" => "chat#view"
+  #   match "/new" => "chat#new"
+   
 end

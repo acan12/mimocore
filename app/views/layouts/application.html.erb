@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Mimocore</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+<title>School Education</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+<!-- <link rel="stylesheet" href="stylesheets/layout.css" type="text/css" /> -->
+<%= stylesheet_link_tag "layout", :media => "all" %>
+
+<script type="text/javascript" src="javascripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery.slidepanel.setup.js"></script>
+<script type="text/javascript" src="javascripts/jquery.cycle.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery.cycle.setup.js"></script>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
+ <%= yield %>
 </html>
+

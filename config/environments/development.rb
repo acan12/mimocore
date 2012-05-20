@@ -27,4 +27,8 @@ Mimocore::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # Do not want to serve precompiled assets from public/assets
+  #config.serve_static_assets = false
+  # config.assets.precompile += ['layout.css']
 end
