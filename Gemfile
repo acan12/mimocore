@@ -12,16 +12,16 @@ gem "pusher", "0.9.2"
 
 
 
+
+
 #this is an optional packaged Solr:
 group  :test, :development, :production do
-	gem "sunspot_solr"
+	gem "sunspot_solr" , '1.3.0'
 end                          
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
 # gem 'sqlite3'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
