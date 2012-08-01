@@ -1,16 +1,19 @@
 require 'rubygems'
 source 'http://gemcutter.org' 
 
-gem 'rails', '3.1.0'           
-#gem "mongo_mapper"                      
+gem 'rails', '3.2.7'           
+#gem "mongo_mapper"
+
+gem "rabl"                      
 gem "bson_ext" 
 gem "mongoid"   
 gem "rails3-generators"                  
 gem "sunspot_rails"
 gem "pusher", "0.9.2"
-                                     
-
-
+gem "oauth-plugin", "0.4.0"     
+gem "slim", "1.2.2"
+gem "carrierwave", "0.5.8"
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 
 
@@ -18,6 +21,9 @@ gem "pusher", "0.9.2"
 group  :test, :development, :production do
 	gem "sunspot_solr" , '1.3.0'
 end                          
+
+
+
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

@@ -5,6 +5,7 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
 require "rails/test_unit/railtie"     
+require 'oauth/rack/oauth_filter'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -23,7 +24,7 @@ module Mimocore
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
-
+    
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
@@ -38,8 +39,9 @@ module Mimocore
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
+    config.autoload_paths += %W(#{config.root}/lib)
     
+    config.middleware.use OAuth::Rack::OAuthFilter
     
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -55,5 +57,11 @@ module Mimocore
     
     #config.gem "mongo_mapper"                 
     config.gem "mongoid"
+    
+    config.generators do |g|
+      g.orm             :mongoid
+      # g.template_engine :haml
+      # g.test_framework  :rspec
+    end
   end
 end
