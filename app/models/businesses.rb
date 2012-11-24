@@ -2,9 +2,11 @@ class Businesses
   include Mongoid::Document
   include Mongoid::Timestamps
                   
-  field :bizname  
+  field :merchant_id
+  field :merchant_name
   field :description, type: String
   
-  has_many :events, :as => :eventable
+  
+  # embeds_many :events
   
 end

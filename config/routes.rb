@@ -1,4 +1,42 @@
 Mimocore::Application.routes.draw do   
+
+  use_doorkeeper
+  
+  devise_for :users
+  
+  # Routes for API mimocore
+  namespace :api do
+      namespace :v1 do
+        get "/streams" => "streams#index"
+        post "/streams" => "streams#create"   
+          
+        get "/biz" => "businesses#index"    
+        post "/biz" => "businesses#create"     
+        put "/biz" => "businesses#update"
+        delete "/biz/delete" => "businesses#delete"
+          
+        #resources :business, :as => "biz", :only => [:index, :create]
+      end
+      namespace :v2 do
+        # routes for version 2 API REST
+      end
+  end  
+   
+  # Routes for school web application
+  namespace :school do
+     get "/home"    => "home#index"
+     get "/lesson"  => "lesson#index"
+  end
+  
+  
+  
+  
+  
+  
+  
+  # mount Doorkeeper::Engine => '/oauth'
+
+
   # resources :oauth_clients
   # 
   #   match '/oauth/test_request',  :to => 'oauth#test_request',  :as => :test_request
@@ -72,24 +110,7 @@ Mimocore::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'                    
                                    
-  namespace :api do
-        namespace :v1 do
-          get "/streams" => "streams#index"
-          post "/streams" => "streams#create"   
-          
-          get "/biz" => "businesses#index"    
-          post "/biz" => "businesses#create"     
-          put "/biz" => "businesses#update"
-          delete "/biz/delete" => "businesses#delete"
-          
-          #resources :business, :as => "biz", :only => [:index, :create]
-        end
-   end  
-   
-   namespace :school do
-     get "/home"    => "home#index"
-     get "/lesson"  => "lesson#index"
-   end
+  
   
   # resources :chatroom
   #   root :to => 'index#index'
