@@ -25,7 +25,7 @@ gem "slim", "1.2.2"
 
 ## upload image
 gem "carrierwave", "0.5.8"
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+# gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 ## this is an optional packaged Solr:
 group  :test, :development do
