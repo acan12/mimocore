@@ -10,5 +10,6 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: "mongodb://heroku:120881heroku@staff.mongohq.com:10037/app1611555" 
+  uri: "mongodb://heroku:120881heroku@alex.mongohq.com:10065/app9456473"
+  # uri: "mongodb://heroku:120881heroku@staff.mongohq.com:10037/app1611555" 
  
