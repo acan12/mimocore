@@ -1,4 +1,4 @@
-class Api::V1::CredentialsController < Api::V1::ApiController
+class Api::V1::CredentialsController < Api::V1::ApiApplicationController
   doorkeeper_for  :all
   respond_to      :json
   
